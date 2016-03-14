@@ -3,6 +3,14 @@ $navbar-default-bg: #16a085;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.btn-primary {
+	background-color: #16a085;
+}
+
+.btn-primary:hover {
+	background-color: #16a085;
+}
+
 #logo {
 	float: left;
 	font-size: 1.7em;
@@ -44,7 +52,7 @@ $navbar-default-bg: #16a085;
 
 footer {
 	margin-top: 45px;
-	padding-top: 5px;
+	padding-top: 25px;
 	border-top: 1px solid #16a085;
 	color: #777;
 }
@@ -63,7 +71,8 @@ footer nav ul {
 
 footer nav ul li {
 	float: left;
-	margin-left: 20px;
+	margin-left: 30px;
+	font-weight: bold;
 }
 
 footer a:hover {
