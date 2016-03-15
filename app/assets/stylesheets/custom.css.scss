@@ -37,7 +37,7 @@ $navbar-default-bg: #16a085;
 	background-size: cover;
 }
 
-.jumbotron h1, h3 {
+.jumbotron h1, h3, h5 {
 	color: #fff;
 	text-align: center;
 	margin-bottom: 30px;
@@ -115,7 +115,18 @@ footer a:hover {
 	margin-top: 0;
 }
 
-#article-actions .col-sm-10 {
+.article-actions {
 	border-top: 1px solid #e3e3e3;
 	padding-top: 10px; 
+}
+
+// index.html.erb
+.article-title {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.article-body {
+	border-top: 1px solid #e3e3e3;
+	padding: 15px 0;
 }
