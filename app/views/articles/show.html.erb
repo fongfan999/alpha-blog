@@ -1,12 +1,24 @@
 <div class="container">
-	<h1>Showing selected article</h1>
+	<h2 class="center">Title: <%= @article.title %></h2>
+	<div class="row">
+		<div class="well col-sm-8 col-sm-offset-2">
+			<h4 class="center description"><strong>Description:</strong></h4>
+			<hr/>
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1"><%= simple_format(@article.description) %></div>
+			</div>
+			
+			<div class="row" id="article-actions">
+				<div class="col-sm-10 col-sm-offset-1">
+					<%= link_to "Back to view all articles", articles_path, class: "btn btn-sm btn-success" %> | 
+					<%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-sm btn-primary" %> | 
+					<%= link_to "Delect this article", articles_path(@article),
+																							method: :delete,
+																							data: { confirm: "Are you sure" },
+																							class: "btn btn-sm btn-danger" %>
+				</div>
+			</div>
+		</div>
+	</div>
 
-	<p>
-		Title: <%= @article.title %>
-	</p>
-	<p>
-		Description: <%= @article.description %>
-	</p>
-
-	<%= link_to "Back to articles listing", articles_path %> | <%= link_to "Edit this article", edit_article_path(@article) %>
 </div>

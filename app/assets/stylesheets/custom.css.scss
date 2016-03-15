@@ -109,3 +109,13 @@ footer a:hover {
 	font-weight: bold;
 	letter-spacing: 1px;
 }
+
+// show.html.erb
+.description {
+	margin-top: 0;
+}
+
+#article-actions .col-sm-10 {
+	border-top: 1px solid #e3e3e3;
+	padding-top: 10px; 
+}
