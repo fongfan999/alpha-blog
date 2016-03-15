@@ -32,17 +32,20 @@ $navbar-default-bg: #16a085;
 .jumbotron {
 	padding-top: 100px;
 	margin-top: -20px;
-	height: 500px;
+	height: 600px;
 	background: url(cover_page.jpg) center no-repeat;
 	background-size: cover;
 }
 
-.jumbotron h1 {
+.jumbotron h1, h3 {
 	color: #fff;
 	text-align: center;
 	margin-bottom: 30px;
-	letter-spacing: -1px;
+}
+
+.jumbotron h1 {
 	font-weight: bold;
+	letter-spacing: -1px;
 }
 
 .btn-xlarge {
@@ -67,6 +70,7 @@ footer nav {
 
 footer nav ul {
 	list-style-type: none;
+	padding-bottom: 30px;
 }
 
 footer nav ul li {
@@ -77,4 +81,31 @@ footer nav ul li {
 
 footer a:hover {
 	color: #222;
+}
+
+// _form.html.erb
+.panel-danger {
+	margin-top: -15px;
+	margin-bottom: 35px;
+}
+
+.panel-title {
+	font-weight: bold;
+}
+
+.panel-body{
+	background-color: #F2DEDE;
+}
+
+.panel-body ul li {
+	color: #A94442;
+}
+
+
+// new.html.erb
+.form-title {
+	color: #16a085;
+	margin-bottom: 50px;
+	font-weight: bold;
+	letter-spacing: 1px;
 }
