@@ -29,6 +29,10 @@ $navbar-default-bg: #16a085;
 	text-align: center;
 }
 
+.navbar-default .navbar-nav > li > a {
+	color: #fff;
+}
+
 .jumbotron {
 	padding-top: 100px;
 	margin-top: -20px;
