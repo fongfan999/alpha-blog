@@ -8,13 +8,23 @@
 					<div class="col-sm-8 col-sm-offset-2">
 						<div class="well well-lg">
 							<div class="article-title"><%= link_to article.title, article_path(article) %></div>
-							<div class="article-body"><%= truncate(article.description, length: 100) %></div>
+							<div class="article-body">
+								<%= truncate(article.description, length: 100) %>
+								<div class="article-meta-details">
+									<small>
+										Created by: <%= article.user.username if article.user %>, 
+										<%= time_ago_in_words(article.created_at) %> ago. 
+										Last updated: <%= time_ago_in_words(article.updated_at) %> ago
+									</small>
+								</div>
+							</div>
 							<div class="article-actions">
-							<%= link_to "Edit this article", edit_article_path(article), class: "btn btn-sm btn-primary" %> | 
-							<%= link_to "Delect this article", article_path(article), method: :delete,
-																		data: { confirm: "Are you sure?" },
-																		class: "btn btn-sm btn-danger" %>
-																		</div>
+								<%= link_to "Edit this article", edit_article_path(article), class: "btn btn-sm btn-primary" %> | 
+								<%= link_to "Delect this article", article_path(article),
+																			method: :delete,
+																			data: { confirm: "Are you sure?" },
+																			class: "btn btn-sm btn-danger" %>
+								</div>
 						</div>
 					</div>
 				</div>
