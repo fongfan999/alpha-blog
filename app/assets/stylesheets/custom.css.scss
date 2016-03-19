@@ -57,36 +57,6 @@ $navbar-default-bg: #16a085;
 	background-color: #1abc9c;
 }
 
-footer {
-	margin-top: 45px;
-	padding-top: 25px;
-	border-top: 1px solid #16a085;
-	color: #777;
-}
-
-footer small {
-	float: left;
-}
-
-footer nav {
-	float: right;
-}
-
-footer nav ul {
-	list-style-type: none;
-	padding-bottom: 30px;
-}
-
-footer nav ul li {
-	float: left;
-	margin-left: 30px;
-	font-weight: bold;
-}
-
-footer a:hover {
-	color: #222;
-}
-
 // _form.html.erb
 .panel-danger {
 	margin-top: -15px;
@@ -138,4 +108,39 @@ footer a:hover {
 .article-meta-details {
 	border-top: 1px solid #e3e3e3;
 	margin-top: 15px;
+}
+
+.listing {
+	padding-left: 0;
+}
+
+// Footer
+footer {
+	margin-top: 45px;
+	padding-top: 25px;
+	border-top: 1px solid #16a085;
+	color: #777;
+}
+
+footer small {
+	float: left;
+}
+
+footer nav {
+	float: right;
+}
+
+footer nav ul {
+	list-style-type: none;
+	padding-bottom: 30px;
+}
+
+footer nav ul li {
+	float: left;
+	margin-left: 30px;
+	font-weight: bold;
+}
+
+footer a:hover {
+	color: #222;
 }
