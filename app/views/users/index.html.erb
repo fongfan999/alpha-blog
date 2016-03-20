@@ -8,6 +8,9 @@
 					<span><%= link_to gravatar_for(user, size: 70), user_path(user) %></span><br/>
 					<span class="article-title"><%= link_to user.username, user_path(user) %></span><br/>
 					<span><small><%= pluralize(user.articles.count, "article") if user.articles %></small></span>
+					<% if current_user.admin? %>
+						<div><%= link_to "Edit this user", edit_user_path(user), class: "btn btn-sm btn-primary" %></div>
+					<% end %>
 				</div>
 			</div>
 		</div>

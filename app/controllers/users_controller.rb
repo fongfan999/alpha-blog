@@ -14,8 +14,8 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
-			flash[:success] = "Welcome #{@user.username} to the Alpha blog"
 			session[:user_id] = @user.id
+			flash[:success] = "Welcome #{@user.username} to the Alpha blog"
 			redirect_to articles_path
 		else
 			render "new"
@@ -48,7 +48,7 @@ class UsersController < ApplicationController
 		end
 
 		def require_same_user
-			if current_user != @user
+			if current_user != @user && !current_user.admin?
 				flash[:danger] = "You can only edit your own account"
 				redirect_to articles_path
 			end
