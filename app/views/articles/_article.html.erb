@@ -13,13 +13,15 @@
 						</small>
 					</div>
 				</div>
-				<div class="article-actions">
-					<%= link_to "Edit this article", edit_article_path(article), class: "btn btn-sm btn-primary" %> | 
-					<%= link_to "Delect this article", article_path(article),
-																method: :delete,
-																data: { confirm: "Are you sure?" },
-																class: "btn btn-sm btn-danger" %>
+				<% if logged_in? && current_user == article.user %>
+					<div class="article-actions">
+						<%= link_to "Edit this article", edit_article_path(article), class: "btn btn-sm btn-primary" %> | 
+						<%= link_to "Delect this article", article_path(article),
+																	method: :delete,
+																	data: { confirm: "Are you sure?" },
+																	class: "btn btn-sm btn-danger" %>
 					</div>
+				<% end %>
 			</div>
 		</div>
 	</div>
