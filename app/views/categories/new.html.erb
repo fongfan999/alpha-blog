@@ -1,25 +1,5 @@
 <div class="container">
   <h1 class="center margin-bottom-35">Create new category</h1>
 
-  <%= render "shared/errors", obj: @category %>
-
-  <%= form_for @category do |f| %>
-  	<div class="row margin-bottom-35">
-  		<div class="form-group">
-  			<div class="col-sm-2 col-sm-offset-2"><%= f.label :name, class: "control-label" %></div>
-  			<div class="col-sm-6"><%= f.text_field :name, class: "form-control", placeholder: "Enter category name", autofocus: true %></div>
-  		</div>
-  	</div>
-    <div class="row">
-  		<div class="form-group">
-  			<div class="col-sm-offset-4">
-  				<div class="btn"><%= f.submit class: "btn btn-primary btn-lg" %></div>
-  			</div>
-  		</div>
-  	</div>
-  <% end %><br/>
-
-  <div class="row">
-  	<div class="col-sm-offset-1">[ <%= link_to "Cancel request and return to articles listing", articles_path %> ]</div>
-  </div>
+  <%= render "form" %>
 </div>
