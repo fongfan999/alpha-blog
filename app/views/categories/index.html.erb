@@ -6,7 +6,12 @@
     <% @categories.each do |category| %>
       <div class="row">
         <div class="well col-md-4 col-md-offset-4">
-          <div class="article-title"><%= link_to category.name, category_path(category) %></div>
+          <div class="article-title">
+            <%= link_to category.name, category_path(category) %>
+          </div>
+          <small>
+            <%= pluralize(category.articles.count, "article") %>
+          </small>
         </div>
       </div>
     <% end %>

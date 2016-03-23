@@ -26,11 +26,6 @@ ActiveRecord::Schema.define(version: 20160322102345) do
     t.integer  "user_id"
   end
 
-  create_table "articles_categories", force: :cascade do |t|
-    t.integer "article_id"
-    t.integer "category_id"
-  end
-
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"

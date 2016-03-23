@@ -3,31 +3,47 @@
 <%= form_for @article do |f| %>
 	<div class="row">
 		<div class="form-group">
-			<div class="col-sm-2 col-sm-offset-2"><%= f.label :title, class: "control-label" %></div> 
-			<div class="col-sm-6"><%= f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true %></div>
+			<div class="col-sm-2 col-sm-offset-2">
+				<%= f.label :title, class: "control-label" %>
+			</div>
+			<div class="col-sm-6">
+				<%= f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true %>
+			</div>
 		</div>
 	</div>
-
 	<br/>
-		
 	<div class="row">
 		<div class="form-group">
-			<div class="col-sm-2 col-sm-offset-2"><%= f.label :description, class: "control-label" %></div>
-			<div class="col-sm-6"><%= f.text_area :description, class: "form-control", placeholder: "Body of article", rows: "13" %></div>
+			<div class="col-sm-2 col-sm-offset-2">
+				<%= f.label :description, class: "control-label" %>
+			</div>
+			<div class="col-sm-6">
+				<%= f.text_area :description, class: "form-control", placeholder: "Body of article", rows: "13" %>
+			</div>
 		</div>
 	</div>
-
 	<br/>
-	
+	<div class="row">
+		<div class="form-group">
+			<div class="col-sm-offset-4 col-sm-6">
+				<%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+					<% cb.label(class: "checkbox-inline input_checkbox") { cb.check_box(class: "checkbox") + cb.text } %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<br/>
 	<div class="row">
 		<div class="form-group">
 			<div class="col-sm-offset-4">
-				<div class="btn"><%= f.submit class: "btn btn-primary btn-lg" %></div>			
+				<div class="btn"><%= f.submit class: "btn btn-primary btn-lg" %></div>
 			</div>
 		</div>
 	</div>
 <% end %>
 
 <div class="row">
-	<div class="col-sm-offset-1">[ <%= link_to "Cancel request and return to articles listing", articles_path %> ]</div>
+	<div class="col-sm-offset-1">
+		[ <%= link_to "Cancel request and return to articles listing", articles_path %> ]
+	</div>
 </div>

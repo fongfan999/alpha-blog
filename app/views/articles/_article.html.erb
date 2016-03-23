@@ -7,15 +7,18 @@
 					<%= truncate(article.description, length: 100) %>
 					<div class="article-meta-details">
 						<small>
-							Created by: <%= article.user.username if article.user %>, 
-							<%= time_ago_in_words(article.created_at) %> ago. 
+							Created by: <%= article.user.username if article.user %>,
+							<%= time_ago_in_words(article.created_at) %> ago.
 							Last updated: <%= time_ago_in_words(article.updated_at) %> ago
 						</small>
+						<% if article.categories.any? %>
+						<div>Categories: <%= render article.categories %></div>
+						<% end %>
 					</div>
 				</div>
 				<% if logged_in? && (current_user == article.user || current_user.admin?) %>
 					<div class="article-actions">
-						<%= link_to "Edit this article", edit_article_path(article), class: "btn btn-sm btn-primary" %> | 
+						<%= link_to "Edit this article", edit_article_path(article), class: "btn btn-sm btn-primary" %> |
 						<%= link_to "Delect this article", article_path(article),
 																	method: :delete,
 																	data: { confirm: "Are you sure?" },

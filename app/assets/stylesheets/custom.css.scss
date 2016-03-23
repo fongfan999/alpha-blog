@@ -61,7 +61,12 @@ $navbar-default-bg: #16a085;
 	margin-bottom: 35px;
 }
 
-// _form.html.erb
+// _form.html.erb (artilces)
+.input_checkbox {
+	width: auto !important;
+}
+
+// _form.html.erb (users)
 .panel-danger {
 	margin-top: -15px;
 	margin-bottom: 35px;
@@ -79,6 +84,13 @@ $navbar-default-bg: #16a085;
 	color: #A94442;
 }
 
+// _category.html.erb (categories)
+.badge {
+	background-color: #CEF6F5;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
 
 // new.html.erb
 .form-title {
@@ -95,7 +107,7 @@ $navbar-default-bg: #16a085;
 
 .article-actions {
 	border-top: 1px solid #e3e3e3;
-	padding-top: 10px; 
+	padding-top: 10px;
 }
 
 // index.html.erb
